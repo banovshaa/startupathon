@@ -1,0 +1,39 @@
+.fellowship {
+  padding-top: 80px;
+  &__inner {
+    align-items: center;
+    background-image: url("../../../../assets/images/fellowship/banner.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 14px;
+    border: 1px solid #7a56d6;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+
+    & .title {
+      color: #fff;
+      font-size: 2.4rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+    }
+    & .subtitle {
+      color: rgba(255, 255, 255, 0.92);
+      text-align: center;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    & button {
+      background-image: unset !important;
+      transition: 0.2s !important;
+      &:hover {
+        background-color: #fff0 !important;
+      }
+    }
+  }
+}

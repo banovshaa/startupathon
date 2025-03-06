@@ -1,0 +1,39 @@
+.header {
+  align-items: center;
+  background-color: #000000db;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  & .logo {
+    width: 140px;
+    & img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  & .navigation {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+    margin-right: 16px;
+    transition: all 0.3s;
+
+    & a {
+      & span {
+        color: #fff;
+        font-size: 14px;
+        transition: all 0.3s;
+      }
+      &:hover,
+      &.active {
+        & span {
+          color: #7a56d6;
+        }
+      }
+    }
+  }
+}

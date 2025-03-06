@@ -1,0 +1,132 @@
+.completed__challenges {
+  padding-top: 120px;
+  & .title {
+    color: #fff;
+    font-family: var(--font-montserrat);
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-align: center;
+  }
+  & .subtitle {
+    color: #cccccceb;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 12px;
+    text-align: center;
+  }
+  & .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 1rem;
+    & .card {
+      align-items: flex-start;
+      border-radius: 20px;
+      border: 1px solid #7a56d6;
+      padding: 10px;
+      &__header {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+        & p {
+          font-size: 1.4rem;
+          color: #fff;
+          line-height: 1.1;
+        }
+        & .icon {
+          width: 35px;
+          height: 35px;
+          & img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      &__inner {
+        margin: 20px 0;
+        display: flex;
+        gap: 8px;
+        width: 100%;
+        & .worker__img {
+          width: 50%;
+          height: 250px;
+          min-height: 250px;
+          max-height: 260px;
+          & img {
+            object-fit: cover;
+            border-radius: 8px;
+            align-self: center;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+        & .worker__data {
+          width: 50%;
+          color: #fff;
+          & .name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 4px 0;
+          }
+          & .linkedin__icon {
+            align-items: center;
+            background-color: #7a56d6;
+            border-radius: 8px;
+            display: flex;
+            height: 30px;
+            justify-content: center;
+            margin-right: 10px;
+            margin-top: 8px;
+            width: 30px;
+            & img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          & .position {
+            word-break: break-all;
+            font-size: 1rem;
+            line-height: 1.2;
+            font-weight: 300;
+          }
+          & .desc {
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+            margin-top: 10px;
+            font-weight: 300;
+          }
+        }
+      }
+      &__bottom {
+        & p {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.5;
+          margin-bottom: 10px;
+          & span {
+            color: #7a56d6;
+            font-size: 1.1rem;
+            padding-left: 4px;
+          }
+        }
+      }
+    }
+  }
+  & .see__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    & button {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #7a56d6;
+    }
+  }
+}
