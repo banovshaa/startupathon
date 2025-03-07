@@ -1,0 +1,10 @@
+.see__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  & button {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #7a56d6;
+  }
+}

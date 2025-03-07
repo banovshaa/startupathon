@@ -1,0 +1,26 @@
+.sign__up {
+  padding-bottom: 120px;
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  & .inner {
+    width: 70%;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 16px;
+    & input {
+      background-color: #170c1f;
+      border-radius: 8px;
+      border: 1px solid #7a56d6;
+      color: #333;
+      font-size: 14px;
+      height: 38px;
+      line-height: 1.42857;
+      padding: 8px 12px;
+      width: 100%;
+    }
+  }
+}

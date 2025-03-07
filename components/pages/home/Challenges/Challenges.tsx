@@ -1,14 +1,15 @@
 import styles from "./Challenges.module.scss";
 import ChallengeCard from "./ChallengeCard/ChallengeCard";
+import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
 
 const Challenges = () => {
   return (
     <section className={`${styles.challenges} container`}>
-      <h2 className={styles.title}>Ongoing Startupathon Challenges</h2>
-      <p className={styles.subtitle}>
-        Start your journey—tackle live challenges, earn equity, and lead the
-        future.
-      </p>
+      <TitleWrapper
+        title="Ongoing Startupathon Challenges"
+        subtitle="Start your journey—tackle live challenges, earn equity, and lead the
+        future."
+      />
       <div className={styles.cards}>
         {Array(12)
           .fill(1)

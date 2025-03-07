@@ -1,0 +1,126 @@
+.timeline {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px auto 0 auto;
+  max-width: 1120px;
+  position: relative;
+
+  &__progress {
+    background-color: #414141;
+    height: 100%;
+    position: absolute;
+    width: 3px;
+
+    & .progress__bar {
+      background-image: linear-gradient(#463279 36%, #dcdbdc);
+      height: 50vh;
+      inset: 0 auto 50vh;
+      position: sticky;
+      width: 3px;
+    }
+  }
+
+  & .timeline__item {
+    display: grid;
+    grid-template-columns: 1fr 180px 1fr;
+    margin-top: 40px;
+    padding: 60px 0;
+    position: relative;
+    z-index: 2;
+
+    & .left,
+    & .right {
+      opacity: 0.25;
+      will-change: opacity;
+      animation: appear linear;
+      animation-timeline: view();
+    }
+
+    & .left {
+      align-items: stretch;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      text-align: right;
+
+      & p {
+        clear: right;
+        color: #fff;
+        font-family: var(--font-montserrat);
+        font-size: 1.7rem;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 2rem;
+        position: sticky;
+        text-align: right;
+        top: 50vh;
+      }
+    }
+
+    & .center {
+      display: flex;
+      justify-content: center;
+
+      & .icon {
+        background-color: #fff;
+        border-radius: 4px;
+        display: flex;
+        height: 30px;
+        justify-content: center;
+        max-height: 30px;
+        max-width: 30px;
+        min-height: 30px;
+        min-width: 30px;
+        position: sticky;
+        top: 50vh;
+        width: 30px;
+
+        & img {
+          height: 100%;
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+    }
+
+    & .right {
+      & .subtitle {
+        color: #7a56d6;
+        font-size: 1.3rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 10px;
+      }
+      & .desc {
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-weight: 300;
+        margin: 12px 0 16px;
+      }
+      & .bottom__text {
+        & p {
+          color: #fff;
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 300;
+
+          & span {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}

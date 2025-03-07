@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Montserrat, Space_Grotesk } from "next/font/google";
 import "@/assets/css/global.scss";
 import Header from "@/components/shared/Header/Header";
+import Footer from "@/components/shared/Footer/Footer";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

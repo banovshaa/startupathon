@@ -3,16 +3,18 @@ import CardIcon from "@/assets/images/completedChallenges/demoIcon.png";
 import WorkerImg from "@/assets/images/completedChallenges/demoWorker.jpg";
 import LinkedinIcon from "@/assets/images/shared/linkedin.svg";
 import Button from "@/components/shared/Button/Button";
+import SeeMoreButton from "@/components/shared/SeeMoreButton/SeeMoreButton";
+import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
 import Image from "next/image";
 
 const CompletedChallenges = () => {
   return (
     <section className={`${styles.completed__challenges} container`}>
-      <h2 className={styles.title}>Completed Startupathon Challenges</h2>
-      <p className={styles.subtitle}>
-        People like you have cracked Startupathon challenges and are now leading
-        thriving startups.
-      </p>
+      <TitleWrapper
+        title="Completed Startupathon Challenges"
+        subtitle="People like you have cracked Startupathon challenges and are now leading
+        thriving startups."
+      />
       <div className={styles.cards}>
         {Array(12)
           .fill(1)
@@ -53,9 +55,7 @@ const CompletedChallenges = () => {
             </div>
           ))}
       </div>
-      <div className={styles.see__more}>
-        <button>See more</button>
-      </div>
+      <SeeMoreButton />
     </section>
   );
 };
