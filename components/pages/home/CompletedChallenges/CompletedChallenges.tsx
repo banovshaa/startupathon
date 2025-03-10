@@ -7,19 +7,9 @@ import LinkedinIcon from "@/assets/images/shared/linkedin.svg";
 import Button from "@/components/shared/Button/Button";
 import SeeMoreButton from "@/components/shared/SeeMoreButton/SeeMoreButton";
 import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
-import { getAllChallengesRequest } from "@/services/api.service";
 import Image from "next/image";
-import { useEffect } from "react";
 
 const CompletedChallenges = () => {
-  const get = async () => {
-    const { data, status } = await getAllChallengesRequest();
-    console.log(data);
-    console.log(status);
-  };
-  useEffect(() => {
-    get();
-  }, []);
   return (
     <section
       id="completed"
