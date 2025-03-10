@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./CompletedChallenges.module.scss";
 import CardIcon from "@/assets/images/completedChallenges/demoIcon.png";
 import WorkerImg from "@/assets/images/completedChallenges/demoWorker.jpg";
@@ -5,11 +7,24 @@ import LinkedinIcon from "@/assets/images/shared/linkedin.svg";
 import Button from "@/components/shared/Button/Button";
 import SeeMoreButton from "@/components/shared/SeeMoreButton/SeeMoreButton";
 import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
+import { getAllChallengesRequest } from "@/services/api.service";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const CompletedChallenges = () => {
+  const get = async () => {
+    const { data, status } = await getAllChallengesRequest();
+    console.log(data);
+    console.log(status);
+  };
+  useEffect(() => {
+    get();
+  }, []);
   return (
-    <section className={`${styles.completed__challenges} container`}>
+    <section
+      id="completed"
+      className={`${styles.completed__challenges} container`}
+    >
       <TitleWrapper
         title="Completed Startupathon Challenges"
         subtitle="People like you have cracked Startupathon challenges and are now leading

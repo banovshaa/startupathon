@@ -4,7 +4,7 @@ import Timeline from "./Timeline/Timeline";
 
 const Guide = () => {
   return (
-    <section className={`${styles.guide} container`}>
+    <section id="guide" className={`${styles.guide} container`}>
       <TitleWrapper
         title="Found an idea that matches your skills?"
         subtitle=" Here’s a simple guide on how the Startupathon process works once you

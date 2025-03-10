@@ -4,7 +4,7 @@ import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
 
 const Challenges = () => {
   return (
-    <section className={`${styles.challenges} container`}>
+    <section id="ongoing" className={`${styles.challenges} container`}>
       <TitleWrapper
         title="Ongoing Startupathon Challenges"
         subtitle="Start your journey—tackle live challenges, earn equity, and lead the

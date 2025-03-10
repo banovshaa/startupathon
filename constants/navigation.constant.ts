@@ -7,32 +7,27 @@ import {
 export const navbarNavigation = [
   {
     name: "Ongoing Startupathon",
-    path: "/",
-    value: "ongoing",
-  },
-  {
-    name: "Ongoing Startupathon",
-    path: "/",
+    path: "/#ongoing",
     value: "ongoing",
   },
   {
     name: "Completed Startupathon",
-    path: "/",
+    path: "/#completed",
     value: "completed",
   },
   {
     name: "Startupathon Guide",
-    path: "/",
+    path: "/#guide",
     value: "guide",
   },
   {
     name: "How To Win",
-    path: "/",
+    path: "/#win",
     value: "win",
   },
   {
     name: "Mentor Network",
-    path: "/",
+    path: "/#mentor",
     value: "mentor",
   },
 ];
