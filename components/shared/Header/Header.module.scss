@@ -106,9 +106,6 @@
         }
       }
     }
-    & .burger {
-      display: block;
-    }
   }
 }
 
@@ -117,6 +114,9 @@
     & .navigation,
     & .button__wrapper {
       display: none;
+    }
+    & .burger {
+      display: block;
     }
   }
 }
