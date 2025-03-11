@@ -10,7 +10,6 @@ import { useState } from "react";
 
 const Subscribe = () => {
   const [visibleCount, setVisibleCount] = useState<number>(4);
-  console.log(visibleCount);
 
   return (
     <section className={`${styles.subscribe} container`}>
