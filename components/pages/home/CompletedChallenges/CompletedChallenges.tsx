@@ -8,8 +8,11 @@ import Button from "@/components/shared/Button/Button";
 import SeeMoreButton from "@/components/shared/SeeMoreButton/SeeMoreButton";
 import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
 import Image from "next/image";
+import { useState } from "react";
 
 const CompletedChallenges = () => {
+  const [visibleCount, setVisibleCount] = useState<number>(6);
+
   return (
     <section
       id="completed"
@@ -23,6 +26,7 @@ const CompletedChallenges = () => {
       <div className={styles.cards}>
         {Array(12)
           .fill(1)
+          .slice(0, visibleCount)
           .map((_, index) => (
             <div key={"card" + index} className={styles.card}>
               <div className={styles.card__header}>
@@ -60,7 +64,12 @@ const CompletedChallenges = () => {
             </div>
           ))}
       </div>
-      <SeeMoreButton />
+      <SeeMoreButton
+        visibleCount={visibleCount}
+        items={Array(12)}
+        setVisibleCount={setVisibleCount}
+        limit={3}
+      />
     </section>
   );
 };

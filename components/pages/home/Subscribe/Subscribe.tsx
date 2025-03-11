@@ -1,11 +1,17 @@
+"use client";
+
 import TitleWrapper from "@/components/shared/TitleWrapper/TitleWrapper";
 import styles from "./Subscribe.module.scss";
 import SeeMoreButton from "@/components/shared/SeeMoreButton/SeeMoreButton";
 import Image from "next/image";
 import LinkedinIcon from "@/assets/images/shared/linkedin.svg";
 import Link from "next/link";
+import { useState } from "react";
 
 const Subscribe = () => {
+  const [visibleCount, setVisibleCount] = useState<number>(4);
+  console.log(visibleCount);
+
   return (
     <section className={`${styles.subscribe} container`}>
       <TitleWrapper
@@ -14,8 +20,9 @@ const Subscribe = () => {
         subtitle="Join Persist and gain access to our 400+ millionaire and billionaire startup network."
       />
       <div className={styles.mentors}>
-        {Array(4)
+        {Array(12)
           .fill(1)
+          .slice(0, visibleCount)
           .map((_, index) => (
             <div key={"mentor__" + index} className={styles.card}>
               <div className={styles.mentor__img}>
@@ -38,7 +45,12 @@ const Subscribe = () => {
             </div>
           ))}
       </div>
-      <SeeMoreButton />
+      <SeeMoreButton
+        visibleCount={visibleCount}
+        setVisibleCount={setVisibleCount}
+        items={Array(12)}
+        limit={4}
+      />
     </section>
   );
 };

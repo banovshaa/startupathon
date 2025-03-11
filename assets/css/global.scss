@@ -33,10 +33,11 @@ body {
   height: 100%;
   min-width: 340px;
   font-family: var(--font-open-sans);
-  scrollbar-color: #7a56d6 #7a56d6;
+  scrollbar-color: #000 #7a56d6;
   scrollbar-width: thin;
   overflow-x: hidden;
 }
+
 body {
   line-height: 1;
   -ms-text-size-adjust: 100%;
