@@ -29,3 +29,9 @@
     background-color: #42307340;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
