@@ -24,3 +24,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .ownership {
+    padding-top: 60px;
+    & .title {
+      font-size: 2rem;
+      line-height: 1.1;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .ownership {
+    & .title {
+      font-size: 20px;
+      line-height: 1.2;
+    }
+    & .photo__wrapper {
+      height: 480px;
+    }
+  }
+}
