@@ -119,3 +119,20 @@
     clip-path: inset(0, 0, 0, 0);
   }
 }
+
+@media (max-width: 993px) {
+  .completed__challenges {
+    padding-top: 80px;
+
+    & .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .completed__challenges {
+    & .cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
